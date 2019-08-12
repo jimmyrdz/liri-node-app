@@ -50,6 +50,7 @@ var artist = process.argv[4]
     if(operator === "concert"){
         axios.get("https://rest.bandsintown.com/artists/" + title + "/events?app_id=codingbootcamp")
     .then(function(response) {
+        // console.log(response.data + "I lovr the pats");
         for (var i = 0; i < response.data.length; i++) {
 
             var dateFormat = moment(response.data[0].datetime).format("L");
